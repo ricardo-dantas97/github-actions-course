@@ -1,7 +1,7 @@
 name: 07 - Using Expressions
+run-name: 07 - Using Expressions | DEBUG - ${{ inputs.debug == true && 'ON' || 'OFF' }}
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       debug:
@@ -23,7 +23,7 @@ jobs:
       - name: "[debug] Print when triggered from main"
         if: ${{ inputs.debug == true && github.ref_name == 'main' }}
         run: |
-          echo I was triggered from main brnach
+          echo I was triggered from main branch
     
       - name: Greeting
         run: |
