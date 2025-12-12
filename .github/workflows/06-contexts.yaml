@@ -5,7 +5,6 @@ on:
     workflow_dispatch:
         inputs:
             debug:
-                description: Identify whether it's a debug run or not
                 type: boolean
                 default: false
 env:
