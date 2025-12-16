@@ -31,3 +31,6 @@ jobs:
               if: ${{ cancelled() }}
               run: |
                 echo: "The workflow has been cancelled"
+
+            - name: Sleep for 20 seconds
+              run: sleep 20
