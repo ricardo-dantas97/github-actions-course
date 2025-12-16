@@ -12,6 +12,9 @@ jobs:
               run: |
                 exit 1
         
+            - name: Sleep for 20 seconds
+              run: sleep 20
+                
             - name: I will be skipped
               if: ${{ success() }}
               run: |
@@ -31,6 +34,3 @@ jobs:
               if: ${{ cancelled() }}
               run: |
                 echo: "The workflow has been cancelled"
-
-            - name: Sleep for 20 seconds
-              run: sleep 20
