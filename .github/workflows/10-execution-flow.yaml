@@ -3,7 +3,7 @@ name: 10 - Controlling the Execution Flow
 on:
     workflow_dispatch:
         inputs:
-            pass-unit-tests:
+            pass_unit_tests:
                 description: Wheter unit tests will pass or not
                 type: boolean
                 default: false
@@ -21,10 +21,10 @@ jobs:
             - name: Running unit tests
               run: |
                 echo "Running unit tests"
-                echo "Input: ${{ inputs.pass-unit-tests }}"
+                echo "Input: ${{ inputs.pass_unit_tests }}"
             
             - name: Failing tests 
-              if: inputs.pass-unit-tests == 'false'
+              if: inputs.pass_unit_tests == 'false'
               run: exit 1
 
     deploy-nonprod:
