@@ -24,7 +24,7 @@ jobs:
                 echo "Input: ${{ inputs.pass_unit_tests }}"
             
             - name: Failing tests 
-              if: inputs.pass_unit_tests == 'false'
+              if: inputs.pass_unit_tests == false
               run: exit 1
 
     deploy-nonprod:
